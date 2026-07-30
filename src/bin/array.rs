@@ -1,3 +1,11 @@
+const ARRAY: [i32; 5] = [1, 22, 333, 4444, 55555];
+
+fn print_const_array() {
+    for (idx, num) in ARRAY.iter().enumerate() {
+        println!("idx:{} -> value:{}", idx, num)
+    }
+}
+
 fn main() {
     let mut numbers: [i32; 5] = [1, 2, 3, 4, 5];
 
@@ -14,7 +22,11 @@ fn main() {
     // let result = numbers.map(|n| n * 2);
     let result = numbers.map(double);
 
-    println!("{:?}", result)
+    println!("{:?}", result);
+
+    println!("Looping & Printing const ARRAY");
+
+    print_const_array()
 }
 
 fn double(n: i32) -> i32 {
