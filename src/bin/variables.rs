@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 const PI: f64 = 3.14;
 
 fn mutable_var() {
