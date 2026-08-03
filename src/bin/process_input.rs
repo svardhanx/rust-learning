@@ -30,7 +30,10 @@ fn main() {
         } else if num2 == None {
             print!("Enter num two: ");
 
-            io::stdout().flush().unwrap();
+            if let Err(flush_error) = io::stdout().flush() {
+                eprintln!("error flushing to stdout: {}", flush_error);
+                return;
+            }
 
             io::stdin()
                 .read_line(&mut input)
