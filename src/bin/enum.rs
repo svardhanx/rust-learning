@@ -46,6 +46,11 @@ fn main() {
 
     let home = IpAddr::V4(127, 0, 0, 1);
 
+    // Destructuring
+    if let IpAddr::V4(a, b, c, d) = home {
+        println!("Destructuring - {}.{}.{}.{}", a, b, c, d)
+    }
+
     // println!("home: {:#?}", home);
     print_address(home);
 
