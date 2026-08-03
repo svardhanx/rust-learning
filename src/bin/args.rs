@@ -4,7 +4,7 @@ fn main() {
     let args: Vec<String> = env::args().collect();
 
     if args.len() < 2 {
-        eprintln!("You did not any args");
+        eprintln!("You did not provide any args");
         std::process::exit(1);
     }
 
