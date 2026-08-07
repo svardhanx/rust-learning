@@ -10,6 +10,8 @@ fn main() {
     // let mut vec = vec![1, 2, 3, 4, 5];
     // vec.push(10);
 
+    let search_num: i32 = 10000;
+
     let mut vec_explicit: Vec<i32> = Vec::new();
 
     for i in 1..=5 {
@@ -42,5 +44,8 @@ fn main() {
 
     print_vec_elements::<i32>(&vec_explicit);
 
-    println!("is 1000 present? {}", vec_explicit.contains(&1000))
+    println!(
+        "is {search_num} present? {}",
+        vec_explicit.contains(&search_num)
+    )
 }
